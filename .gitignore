@@ -8,6 +8,10 @@ build/
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
+.idea/gradle.xml
+.idea/kotlinc.xml
+.idea/misc.xml
+.idea/workspace.xml
 .idea/libraries/
 *.iws
 *.iml
@@ -43,4 +47,6 @@ bin/
 /cache/
 /.idea/
 /savedmodels/
-/.idea/
+
+
+/.idea/inspectionProfiles/
