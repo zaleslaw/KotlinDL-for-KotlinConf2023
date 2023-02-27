@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "1.8.0"
+    id("org.jetbrains.kotlinx.dataframe") version "0.9.1"
 }
 
 group = "com.zaleslaw"
@@ -15,7 +16,20 @@ dependencies {
     implementation ("org.apache.logging.log4j:log4j-api:2.17.2")
     implementation ("org.apache.logging.log4j:log4j-core:2.17.2")
     implementation ("org.apache.logging.log4j:log4j-slf4j-impl:2.17.2")
+    implementation ("org.jetbrains.kotlinx:dataframe:0.9.1")
     testImplementation(kotlin("test"))
+}
+
+kotlin.sourceSets.getByName("main").kotlin.srcDir("build/generated/ksp/main/kotlin/")
+
+dataframes {
+    schema {
+        data = "src/main/resources/titanic.csv"
+        name = "com.zaleslaw.Passenger"
+        csvOptions {
+            delimiter = ';'
+        }
+    }
 }
 
 tasks.test {
