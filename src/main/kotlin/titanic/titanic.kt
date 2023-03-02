@@ -1,6 +1,6 @@
 package titanic
 
-import com.zaleslaw.*
+import com.zaleslaw.titanic.*
 import org.jetbrains.kotlinx.dataframe.ColumnSelector
 import org.jetbrains.kotlinx.dataframe.DataFrame
 import org.jetbrains.kotlinx.dataframe.api.by

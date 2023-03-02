@@ -25,7 +25,7 @@ kotlin.sourceSets.getByName("main").kotlin.srcDir("build/generated/ksp/main/kotl
 dataframes {
     schema {
         data = "src/main/resources/titanic.csv"
-        name = "com.zaleslaw.Passenger"
+        name = "com.zaleslaw.titanic.Passenger"
         csvOptions {
             delimiter = ';'
         }
