@@ -1,4 +1,4 @@
-package transferLearning
+package first.transferLearning
 
 import org.jetbrains.kotlinx.dl.api.core.Functional
 import org.jetbrains.kotlinx.dl.api.core.Sequential

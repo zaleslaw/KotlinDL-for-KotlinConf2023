@@ -1,4 +1,4 @@
-package transferLearning
+package second.demo_2_transfer_learning
 
 import org.jetbrains.kotlinx.dl.api.core.Functional
 import org.jetbrains.kotlinx.dl.api.core.SavingFormat
