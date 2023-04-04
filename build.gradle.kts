@@ -19,7 +19,7 @@ dependencies {
     implementation ("org.apache.logging.log4j:log4j-core:2.17.2")
     implementation ("org.apache.logging.log4j:log4j-slf4j-impl:2.17.2")
     implementation ("org.jetbrains.kotlinx:dataframe:0.9.1")
-    implementation ("org.jetbrains.kotlinx:dataframe:0.9.1")
+    implementation ("org.jetbrains.kotlinx:ggdsl-lets-plot:0.4.0-dev-12")
     testImplementation(kotlin("test"))
 }
 
