@@ -13,13 +13,7 @@ import org.jetbrains.kotlinx.dl.impl.summary.logSummary
 import java.awt.image.BufferedImage
 import java.io.File
 
-private const val EPOCHS = 3
-private const val TRAINING_BATCH_SIZE = 8
-private const val TEST_BATCH_SIZE = 16
-private const val NUM_CLASSES = 2
-private const val NUM_CHANNELS = 3
 private const val IMAGE_SIZE = 300
-private const val TRAIN_TEST_SPLIT_RATIO = 0.7
 private const val PATH_TO_MODEL = "savedmodels/customResNet50"
 
 fun main() {
@@ -54,6 +48,6 @@ private fun setUpModel(it: Functional) {
         metric = Metrics.ACCURACY
     )
     it.logSummary()
-
+    println ("Starting load model weights.....")
     it.loadWeights(File(PATH_TO_MODEL))
 }
