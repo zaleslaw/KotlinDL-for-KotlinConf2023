@@ -19,16 +19,7 @@ private const val PATH_TO_MODEL = "savedmodels/customResNet50"
 fun main() {
     val model = Functional.loadModelConfiguration(File("$PATH_TO_MODEL/modelConfig.json"))
 
-    val fileDataLoader = pipeline<BufferedImage>()
-        .resize {
-            outputHeight = IMAGE_SIZE
-            outputWidth = IMAGE_SIZE
-            interpolation = InterpolationType.BILINEAR
-        }
-        .convert { colorMode = ColorMode.BGR }
-        .toFloatArray { }
-        .call(TFModels.CV.ResNet50().preprocessor)
-        .fileLoader()
+    val fileDataLoader = getFileDataLoader()
 
     model.use {
         setUpModel(it)
@@ -40,6 +31,17 @@ fun main() {
         }
     }
 }
+
+private fun getFileDataLoader() = pipeline<BufferedImage>()
+    .resize {
+        outputHeight = IMAGE_SIZE
+        outputWidth = IMAGE_SIZE
+        interpolation = InterpolationType.BILINEAR
+    }
+    .convert { colorMode = ColorMode.BGR }
+    .toFloatArray { }
+    .call(TFModels.CV.ResNet50().preprocessor)
+    .fileLoader()
 
 private fun setUpModel(it: Functional) {
     it.compile(
