@@ -1,6 +1,6 @@
 plugins {
     kotlin("jvm") version "1.8.0"
-    id("org.jetbrains.kotlinx.dataframe") version "0.9.1"
+    id("org.jetbrains.kotlinx.dataframe") version "0.10.0"
 }
 
 group = "com.zaleslaw"
@@ -11,14 +11,14 @@ repositories {
 }
 
 dependencies {
-    implementation ("org.jetbrains.kotlinx:kotlin-deeplearning-tensorflow:0.5.1")
-    implementation ("org.jetbrains.kotlinx:kotlin-deeplearning-dataset:0.5.1")
-    implementation ("org.jetbrains.kotlinx:kotlin-deeplearning-onnx:0.5.1")
-    implementation ("org.jetbrains.kotlinx:kotlin-deeplearning-visualization:0.5.1")
+    implementation ("org.jetbrains.kotlinx:kotlin-deeplearning-tensorflow:0.5.2-alpha-1")
+    implementation ("org.jetbrains.kotlinx:kotlin-deeplearning-dataset:0.5.2-alpha-1")
+    implementation ("org.jetbrains.kotlinx:kotlin-deeplearning-onnx:0.5.2-alpha-1")
+    implementation ("org.jetbrains.kotlinx:kotlin-deeplearning-visualization:0.5.2-alpha-1")
     implementation ("org.apache.logging.log4j:log4j-api:2.17.2")
     implementation ("org.apache.logging.log4j:log4j-core:2.17.2")
     implementation ("org.apache.logging.log4j:log4j-slf4j-impl:2.17.2")
-    implementation ("org.jetbrains.kotlinx:dataframe:0.9.1")
+    implementation ("org.jetbrains.kotlinx:dataframe:0.10.0")
     implementation ("org.jetbrains.kotlinx:kandy-lets-plot:0.4.0-dev-16")
     implementation ("org.jetbrains.kotlinx:kandy-api:0.4.0-dev-16")
     testImplementation(kotlin("test"))
