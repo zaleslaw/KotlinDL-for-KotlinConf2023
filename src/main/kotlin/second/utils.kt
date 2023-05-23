@@ -16,6 +16,6 @@ fun getFileFromResource(fileName: String): File {
     }
 }
 
-const val PROJECT_ROOT = "/Users/Alexey.Zinoviev/IdeaProjects/KotlinDL-for-KotlinConf2023/"
+const val PROJECT_ROOT = "C:\\Users\\Aleksey.Zinovev\\IdeaProjects\\KotlinDL-for-KotlinConf2023/"
 
 fun resToLabel(res: Int): String = if (res == 0) "cat" else "dog"

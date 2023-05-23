@@ -13,17 +13,14 @@ fun resnet18LightAPIPrediction() {
     val model = ONNXModels.CV.ResNet50.pretrainedModel(modelHub)
     model.printSummary()
 
-    // TODO: problem with the images
     model.use {
-        for (i in 1..8) {
-            val imageFile = getFileFromResource("datasets/recognition/image$i.jpeg")
+        val imageFile = getFileFromResource("datasets/kdog.jpg")
 
-            val recognizedObject = it.predictObject(imageFile = imageFile)
-            println(recognizedObject)
+        val recognizedObject = it.predictObject(imageFile = imageFile)
+        println(recognizedObject)
 
-            val top5 = it.predictTopKObjects(imageFile = imageFile, topK = 5)
-            println(top5.toString())
-        }
+        val top5 = it.predictTopKObjects(imageFile = imageFile, topK = 5)
+        println(top5.toString())
     }
 }
 
